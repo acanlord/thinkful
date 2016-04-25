@@ -1,3 +1,5 @@
+#! /usr/bin/python
+
 class Musician(object):
     def __init__(self, sounds):
         self.sounds = sounds
@@ -27,7 +29,28 @@ class Drummer(Musician):
         # Call the __init__ method of the parent class
         super().__init__(["Boom", "Crash", "Bang"])
 
-    def tune(self):
-        print("Be with you in a moment")
-        print("Crash, bling, blong")
+    def solo(self, length):
+        for i in range(length):
+            print(self.sounds[i % len(self.sounds)], end=" ")
+        print()
 
+    def count(self):
+        for i in range(length):
+            print(self.sounds[i % len(self.sounds)], end=" ")
+        print()
+
+    def combust(self):
+        print("Poof im on fire!")
+
+
+class Band(Musician):
+    def __init__(self):
+        # Call the __init__ method of the parent class
+        super().__init__(["Boom", "Crash", "Bang"])
+
+    def hire(self):
+        print("Your hired")
+
+
+    def fire(self):
+        print("Your Fired")
