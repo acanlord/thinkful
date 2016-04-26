@@ -1,5 +1,3 @@
-#! /usr/bin/python
-
 class Musician(object):
     def __init__(self, sounds):
         self.sounds = sounds
@@ -35,9 +33,9 @@ class Drummer(Musician):
         print()
 
     def count(self):
-        for i in range(length):
-            print(self.sounds[i % len(self.sounds)], end=" ")
-        print()
+        for i in range(1, 5):
+            print (i)
+
 
     def combust(self):
         print("Poof im on fire!")
