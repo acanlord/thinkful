@@ -38,11 +38,11 @@ if __name__ == '__main__':
 
     # Customers
 
-    shannon = Customer("Shannon", 1000)
+    veronica = Customer("Shannon", 1000)
     julie = Customer("julie", 900)
     rick = Customer("rick", 600)
 
-    customersList = [shannon, julie, rick]
+    customersList = [veronica, julie, rick]
 
 
 
