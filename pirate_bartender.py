@@ -5,8 +5,6 @@ import random
 
 
 
-import random
-
 questions = {
     "strong": "Do ye like yer drinks strong?",
     "salty": "Do ye like it with a salty tang?",
