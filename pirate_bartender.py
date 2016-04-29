@@ -1,9 +1,7 @@
 #! /usr/bin/python
 
+
 import random
-
-
-
 
 questions = {
     "strong": "Do ye like yer drinks strong?",
@@ -54,7 +52,7 @@ def make_drink(preferences):
 
 
 # ask user if they want another drink
-    
+
 
 
 drinkname = (random.choice(drink) + "" + random.choice(name))
@@ -72,6 +70,7 @@ def main():
 
     print ("would you like another?")
 
+   
 
 if __name__ == "__main__":
     main()
