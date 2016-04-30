@@ -3,6 +3,10 @@
 
 import random
 
+# Questions
+# 1 line spacing in print statement
+# 2 random second drink is not random. Need loop?
+
 questions = {
     "strong": "Do ye like yer drinks strong?",
     "salty": "Do ye like it with a salty tang?",
@@ -23,18 +27,16 @@ drink = ["slutty", "Flaming", "Adios", "Incredible", "Snake"]
 name = ["redhead", "Dr.Pepper", "MotherTrucker", "Hulk", "Bite"]
 
 
-
-
 # Create funciton
 def find_preferences():
     # Create blank dictionalry
     preferences = {}
     # Loop through dictionary
-    for type, question in questions.items():
+    for var1, var2 in questions.items():
         # print each item in the dictionary
-        print(question)
+        print(var2)
         # Take yes or no answer
-        preferences[type] = input().lower() in ["y", "yes"]
+        preferences[var1] = input().lower() in ["y", "yes"]
         print("")
     return preferences
 
@@ -51,9 +53,22 @@ def make_drink(preferences):
     return drink
 
 
-# ask user if they want another drink
+# Ask user if they would like another drink
 
+def menuChoice():
 
+    while True:
+        another = input("Would you like another drink? ")
+        #print (another)
+        if another.lower() in ("y", "yes"):
+            main()
+
+        #   print ("One drink coming up")
+        #    for ingredient in drink:
+        #        print("A {}".format(ingredient))
+        if another.lower() in ("n", "no"):
+            print ("I was going to cut you off anyways!")
+            break
 
 drinkname = (random.choice(drink) + "" + random.choice(name))
 
@@ -67,10 +82,13 @@ def main():
     print("It's full of good stuff.  The recipe is:")
     for ingredient in drink:
         print("A {}".format(ingredient))
+    menuChoice()
 
-    print ("would you like another?")
 
-   
+
+
 
 if __name__ == "__main__":
     main()
+
+
