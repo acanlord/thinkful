@@ -1,5 +1,5 @@
 # Store an item using fully qualified names
-python3 snippets.py --type "put" --name "list" --snippet "A sequence of things - created using []"
+python3 snippets.py --type "puet" --name "list" --snippet "A sequence of things - created using []"
 
 
 # Store an item using abbreviations
