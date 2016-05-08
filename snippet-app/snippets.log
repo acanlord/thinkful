@@ -1,0 +1,6 @@
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'Test': 'This is a test snippet'
+DEBUG:root:snipet stored successfully.
