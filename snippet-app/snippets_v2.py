@@ -23,17 +23,17 @@ def put(name, snippet):
     return name, snippet
 
 
-def get(name):
+def get(name, snippet):
 
     """Read a nippet with an associated name."""
-    logging.info("Fetching snippet {!r}: {!r}".format(name))
+    logging.info("Storing snippet {!r}: {!r}".format(name, snippet))
     cursor = connection.cursor()
-    command = cursor.fetchone()
+    row = cursor.fetchone()
     while row is not None:
         print (row)
         row = cursor.fetchone()
     logging.debug("snipet pulled successfully.")
-    return name
+    return name, snippet
 
 
 
