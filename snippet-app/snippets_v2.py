@@ -27,11 +27,10 @@ def get(name, snippet):
 
     """Read a nippet with an associated name."""
     logging.info("Storing snippet {!r}: {!r}".format(name, snippet))
+    command = "select * from snippets"
+    cursor.execute(command)
+    for row in cursor:print (row)
     cursor = connection.cursor()
-    row = cursor.fetchone()
-    while row is not None:
-        print (row)
-        row = cursor.fetchone()
     logging.debug("snipet pulled successfully.")
     return name, snippet
 
