@@ -27,8 +27,9 @@ def get(name):
 
     """Read a nippet with an associated name."""
     logging.info("Fetching snippet {!r}: {!r}".format(name))
+    cursor.execute "Select * from list2" 
     cursor = connection.cursor()
-    command = cursor.fetchone()
+    row = cursor.fetchone()
     while row is not None:
         print (row)
         row = cursor.fetchone()
