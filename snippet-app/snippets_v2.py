@@ -26,11 +26,11 @@ def put(name, snippet):
 def get(name, snippet):
 
     """Read a nippet with an associated name."""
+    cursor = connection.cursor()
     logging.info("Storing snippet {!r}: {!r}".format(name, snippet))
-    command = "select * from snippets"
+    command = "select * from snippets where keyword = 'Test';" 
     cursor.execute(command)
     for row in cursor:print (row)
-    cursor = connection.cursor()
     logging.debug("snipet pulled successfully.")
     return name, snippet
 
@@ -66,7 +66,7 @@ def main():
                 name, snippet = put(**arguments)
                 print("stored {!r} as {!r}".format(snippet, name))
     elif command == "get":
-                snipet = get(**arguments)
+                snippet = get(**arguments)
                 print("Retrieved snippet: {!r}".format(snippet))
 
 if __name__ == "__main__":
