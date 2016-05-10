@@ -24,13 +24,17 @@ def put(name, snippet):
 
 
 def get(name):
-    """Retrieve the snippet with a given name.
-    IF there is no such snippet, return '404: Snippet Not Fount'.
-    
-    Returns the snippet.
-    """
-    logging.error("FIXME: Unimplementd - get({!r})".format(name))
-    return""
+
+    """Read a nippet with an associated name."""
+    logging.info("Fetching snippet {!r}: {!r}".format(name))
+    cursor = connection.cursor()
+    command = cursor.fetchone()
+    while row is not None:
+        print (row)
+        row = cursor.fetchone()
+    logging.debug("snipet pulled successfully.")
+    return name
+
 
 
 def main():
