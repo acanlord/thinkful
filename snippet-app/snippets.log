@@ -2,6 +2,17 @@ DEBUG:root:Connecting to PostgreSQL
 DEBUG:root:Database connection established.
 INFO:root:Constructin parser
 DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
 DEBUG:root:Connecting to PostgreSQL
 DEBUG:root:Database connection established.
 INFO:root:Constructin parser
@@ -17,7 +28,6 @@ DEBUG:root:Database connection established.
 INFO:root:Constructin parser
 DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing put subparser
-INFO:root:Storing snippet 'snippet1': 'foo'
 DEBUG:root:Connecting to PostgreSQL
 DEBUG:root:Database connection established.
 INFO:root:Constructin parser
@@ -28,39 +38,357 @@ DEBUG:root:Database connection established.
 INFO:root:Constructin parser
 DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing put subparser
-INFO:root:Storing snippet 'snippet1': 'foo'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'foo': 'bar'
 DEBUG:root:snipet pulled successfully.
 DEBUG:root:Connecting to PostgreSQL
 DEBUG:root:Database connection established.
 INFO:root:Constructin parser
 DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing put subparser
-INFO:root:Storing snippet 'snippet1': 'foo'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'test1': 'test2'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'test1': 'test2'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'test1': 'test3'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'list2': 'foo'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'list': 'foo'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'list': 'foo'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'list': '1'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'list': 
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'list': 
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'list':
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Reading snippet 'file1'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Reading snippet 'line1'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Reading snippet 'list1'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Reading snippet 'list1'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Reading snippet 'Test'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Reading snippet 'Test'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Reading snippet 'Test'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'test': 'test'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'foo': 'bar'
 DEBUG:root:snipet pulled successfully.
 DEBUG:root:Connecting to PostgreSQL
 DEBUG:root:Database connection established.
 INFO:root:Constructin parser
 DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing put subparser
-INFO:root:Storing snippet 'snippet1': 'foo'
+INFO:root:Reading snippet 'Test'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Reading snippet 'name'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established.
+INFO:root:Constructin parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet  'Test'
 DEBUG:root:snipet pulled successfully.
 DEBUG:root:Connecting to PostgreSQL
 DEBUG:root:Database connection established.
 INFO:root:Constructin parser
 DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing put subparser
-INFO:root:Storing snippet 'snippet1': 'foo'
-DEBUG:root:snipet pulled successfully.
-DEBUG:root:Connecting to PostgreSQL
-DEBUG:root:Database connection established.
-INFO:root:Constructin parser
-DEBUG:root:Constructing put subparser
-DEBUG:root:Constructing put subparser
-INFO:root:Storing snippet 'snippet1': 'foo'
-DEBUG:root:Connecting to PostgreSQL
-DEBUG:root:Database connection established.
-INFO:root:Constructin parser
-DEBUG:root:Constructing put subparser
-DEBUG:root:Constructing put subparser
-INFO:root:Storing snippet 'snippet1': 'foo'
+INFO:root:Storing snippet  'Test'
 DEBUG:root:snipet pulled successfully.
