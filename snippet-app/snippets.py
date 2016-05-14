@@ -24,15 +24,20 @@ def put(name, snippet):
 
 
 def get(name):
-
-    """Read a nippet with an associated name."""
-    cursor = connection.cursor()
-    logging.info("Storing snippet  {!r}".format(name))
-    command = "select * from snippets where keyword ='{}'".format(name) 
-    cursor.execute(command)
-    return name, cursor.fetchone()[0]
-
-
+    """Retrieve the snippet with a given name."""
+    while True:
+        logging.info("Retrieving snippet {}".format(name))
+        with connection.cursor() as cursor:
+            command = "select * from snippets where keyword ='{}'".format(name)
+            cursor.execute(command)
+            row = cursor.fetchone()
+        logging.debug("Snippet retrieved successfully.")
+        if not row:
+                return "Snippet does not exist."
+                break
+        else:
+            return row[0]
+            break
 
 
 def main():
