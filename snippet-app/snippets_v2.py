@@ -28,8 +28,7 @@ def get(name, snippet):
     """Read a nippet with an associated name."""
     cursor = connection.cursor()
     logging.info("Storing snippet {!r}: {!r}".format(name, snippet))
-    command = "select * from snippets values ($s, %s" 
-    #command = "insert into snippets values (%s, %s)"
+    command = "select * from snippets values ($s, %s)" 
     cursor.execute(command)
     for row in cursor:print (row)
     logging.debug("snipet pulled successfully.")
