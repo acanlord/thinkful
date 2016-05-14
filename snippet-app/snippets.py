@@ -20,8 +20,6 @@ def put(name, snippet):
     cursor.execute(command, (name, snippet))
     connection.commit()
     logging.debug("snipet stored successfully.")
-    if not row:
-    	return "404: snippet Not Found"
     return name, snippet
 
 
@@ -33,8 +31,11 @@ def get(name):
     command = "select * from snippets where keyword ='{}'".format(name) 
     cursor.execute(command)
     for row in cursor:print (row)
-    logging.debug("snipet pulled successfully.")
-    return name
+    #logging.debug("snipet pulled successfully.")
+    if row[0] == name: 
+		return name, row[1]
+        #return "404: snippet Not Found"
+    return name, "ERROR"
 
 def main():
 
