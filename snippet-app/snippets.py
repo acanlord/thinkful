@@ -12,16 +12,19 @@ connection = psycopg2.connect(database="snippets")
 logging.debug("Database connection established.")
 
 def put(name, snippet):
-
-    """Store a nippet with an associated name."""
-    logging.info("Storing snippet {!r}: {!r}".format(name, snippet))
-    cursor = connection.cursor()
-    command = "insert into snippets values (%s, %s)"
-    cursor.execute(command, (name, snippet))
-    connection.commit()
-    logging.debug("snipet stored successfully.")
-    return name, snippet
-
+	"""Update a snippet with an associated name."""
+	logging.info("Storing snippet {}: {}".format(name, snippet))
+	cursor = connection.cursor()
+	try:
+		command = "insert into snippets values (%s, %s)"
+		cursor.execute(command, (name, snippet))
+	except psycopg2.IntegrityError:
+		connection.rollback()
+		command =  "update snippets set message=%s, hidden=%s where keyword=%s"
+		cursor.execute(command, (snippet, name))
+	connection.commit()
+	logging.debug("Snippet stored successfully.")
+	return name, snippet
 
 def get(name):
     """Retrieve the snippet with a given name."""

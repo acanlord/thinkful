@@ -9,7 +9,7 @@ session = Session()
 Base = declarative_base()
 
 from datetime import datetime
-from sqlalchemy import Column, Integer, String, DateTime
+from sqlalchemy import Float, Column, Integer, String, DateTime
 
 class Item(Base):
 
@@ -38,4 +38,8 @@ class Bid(Base):
 
     Base.metadata.create_all(engine)
 
-
+    beyonce = User()
+    beyonce.username ="bknowles"
+    beyonce.password = "changeme"
+    session.add(beyonce)
+    session.commit()
