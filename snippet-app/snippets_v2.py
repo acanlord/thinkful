@@ -42,9 +42,21 @@ def get(name):
             return row[0]
             break
 
+def search(s):
+    cursor = connection.cursor()
+    logging.info("Fetching Info")
+    cursor.execute(" select * from snippets;")
+    rows = cursor.fetchall()
+    for i in rows:
+        #print (i)
+        keyword, message = i
+        print (keyword,message)
+    
+    	
 
 def main():
-
+   search ('Hello') 
+'''
     """Main function"""
     
     logging.info("Constructin parser")
@@ -74,7 +86,7 @@ def main():
     elif command == "get":
                 snippet = get(**arguments)
                 print("Retrieved snippet: {!r}".format(snippet))
-
+'''
 if __name__ == "__main__":
     main()
 
