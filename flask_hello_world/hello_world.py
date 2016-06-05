@@ -10,7 +10,7 @@ def say_hi():
 
 @app.route("/jedi/<firstname>/<lastname>")
 def jedi(firstname,lastname):
-    return lastname[0:3]+firstname[0:2]
+    return "Your jedi name is " + lastname[0:3]+firstname[0:2]
 
 @app.route("/hello/<name>")
 def hello_person(name):
