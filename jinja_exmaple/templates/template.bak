@@ -43,12 +43,10 @@
     </ul>
     <h3> This is the end of my child template</h3>
 {% endblock %}
-<footer>
-    {% block footer %}
-        Watch! This part of the footer is coming from the base template...
-        <br>
-        <br>
-    {% endblock %}
+{% block footer %}
+{{super()}}
+...and this addition to the footer is coming from the child template.
+{% endblock %}
 </footer>
         </div>
     </body>
