@@ -48,3 +48,10 @@ def add_entry_post():
     session.add(entry)
     session.commit()
     return redirect(url_for("entries"))
+
+@app.route("/entry/id" , methods=["GET"])
+def show_entries():
+    db = blogful()
+    cur = db.execute('select * from entries order by id desc')
+    entries = cur.fetchall()
+    return render_template('entries.html', entries=entries)
