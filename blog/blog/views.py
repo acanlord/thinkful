@@ -49,9 +49,14 @@ def add_entry_post():
     session.commit()
     return redirect(url_for("entries"))
 
-@app.route("/entry/id" , methods=["GET"])
+@app.route("/entry/<id>" , methods=["GET"])
+def show_entry(id):
+    entries=session.query(Entry)
+    entry=entries.get(id)
+    return render_template('entries.html', entries=[entry])
+
+@app.route("/entries" , methods=["GET"])
 def show_entries():
-    db = blogful()
-    cur = db.execute('select * from entries order by id desc')
-    entries = cur.fetchall()
-    return render_template('entries.html', entries=entries)
+    entries=session.query(Entry)
+    everything=entries.all()
+    return render_template('entries.html', entries=everything)
