@@ -60,3 +60,7 @@ def show_entries():
     entries=session.query(Entry)
     everything=entries.all()
     return render_template('entries.html', entries=everything)
+
+@app.route("/login", methods=["GET"])
+def login_get():
+    return render_template("login.html")
