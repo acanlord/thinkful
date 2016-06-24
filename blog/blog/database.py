@@ -26,7 +26,7 @@ class Entry(Base):
 
 Base.metadata.create_all(engine)
 
-from flask.ext.login import UserMixin
+from flask_login import UserMixin
 
 class User(Base, UserMixin):
     __tablename__ = "users"
