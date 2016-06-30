@@ -96,11 +96,11 @@ def delete_post(entryid):
 def login_get():
     return render_template("login.html")
 
-"""
+
 from flask import flash
 from flask_login import login_user
 from werkzeug.security import check_password_hash
-#from models import User
+from .database import User
 
 
 @app.route("/login", methods=["POST"])
@@ -115,6 +115,5 @@ def login_post():
     login_user(user)
     return redirect(url_for("posts"))
 
-#export BLOGFUL_SECRET_KEY="just4now"
-app.secret_key = "changeme"
-"""
+# set the secret key.  keep this really secret:
+app.secret_key = "l\xcd\xaf\x93\xd5sy\xb4WHu\xdd\x8fW\xe4J LY\x14\x98\x13ft"
