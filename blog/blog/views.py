@@ -91,12 +91,12 @@ def delete_post(entryid):
     session.commit()
     return redirect(url_for("entries"))
 
-"""
+
 @app.route("/login", methods=["GET"])
 def login_get():
     return render_template("login.html")
 
-
+"""
 from flask import flash
 from flask_login import login_user
 from werkzeug.security import check_password_hash

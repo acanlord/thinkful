@@ -51,7 +51,7 @@ def adduser():
                 password=generate_password_hash(password))
     session.add(user)
     session.commit()
-
+"""
 @app.route("/login", methods=["POST"])
 def login_post():
     email = request.form["email"]
@@ -63,6 +63,6 @@ def login_post():
 
     login_user(user)
     return redirect(request.args.get('next') or url_for("entries"))
-
+"""
 if __name__ == "__main__":
     manager.run()
