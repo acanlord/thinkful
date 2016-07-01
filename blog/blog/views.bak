@@ -2,6 +2,7 @@ from flask import render_template
 
 from . import app
 from .database import session, Entry
+from flask_login import current_user
 
 
 PAGINATE_BY = 10
@@ -55,40 +56,41 @@ def show_entry(id):
     entry=entries.get(id)
     return render_template('entries.html', entries=[entry])
 
-@app.route("/entry/<postid>")
-def post(postid=Post.id):
-    post = session.query(Post).filter(Post.id == postid).first()
+@app.route("/entry/<id>")
+def post(id=id):
+    post = session.query(Entry).filter(Entry.id == postid).first()
     return render_template(
         "single_post.html",
         post=post,
-        postid=postid,
+        id=id,
     )
 
 
-@app.route("/entry/<postid>/edit", methods=["GET"])
-def edit_post_get(postid=Post.id):
-    return render_template("edit_post.html")
+@app.route("/entry/<entryid>/edit", methods=["GET"])
+def edit_post_get(entryid=Entry.id):
+    entry = session.query(Entry).filter_by(id=entryid).first()
+    return render_template("edit_post.html",entry=entry)
 
 
-@app.route("/entry/<postid>/edit", methods=["POST"])
-def edit_post(postid):
+@app.route("/entry/<entryid>/edit", methods=["POST"])
+def edit_post(entryid):
 
     title = request.form["title"]
     content = mistune.markdown(request.form["content"])
 
-    session.query(Post).filter_by(id=postid).update(
+    session.query(Entry).filter_by(id=entryid).update(
         {"title": title, "content": content}
     )
 
     session.commit()
-    return redirect(url_for("posts"))
+    return redirect(url_for("entries"))
 
 
-@app.route("/post/<postid>/delete", methods=["POST"])
-def delete_post(postid):
-    session.query(Post).filter_by(id=postid).delete()
+@app.route("/entry/<entryid>/delete", methods=["GET"])
+def delete_post(entryid):
+    session.query(Entry).filter_by(id=entryid).delete()
     session.commit()
-    return redirect(url_for("posts"))
+    return redirect(url_for("entries"))
 
 
 @app.route("/login", methods=["GET"])
@@ -99,7 +101,7 @@ def login_get():
 from flask import flash
 from flask_login import login_user
 from werkzeug.security import check_password_hash
-from models import User
+from .database import User
 
 
 @app.route("/login", methods=["POST"])
@@ -114,5 +116,5 @@ def login_post():
     login_user(user)
     return redirect(url_for("posts"))
 
-#export BLOGFUL_SECRET_KEY="just4now"
-app.secret_key = "changeme"
+# set the secret key.  keep this really secret:
+#app.secret_key = "l\xcd\xaf\x93\xd5sy\xb4WHu\xdd\x8fW\xe4J LY\x14\x98\x13ft"

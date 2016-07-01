@@ -2,6 +2,7 @@ from flask import render_template
 
 from . import app
 from .database import session, Entry
+from flask_login import current_user
 
 
 PAGINATE_BY = 10
@@ -44,6 +45,7 @@ def add_entry_post():
     entry = Entry(
         title=request.form["title"],
         content=request.form["content"],
+        author=current_user
     )
     session.add(entry)
     session.commit()
@@ -116,4 +118,4 @@ def login_post():
     return redirect(url_for("posts"))
 
 # set the secret key.  keep this really secret:
-app.secret_key = "l\xcd\xaf\x93\xd5sy\xb4WHu\xdd\x8fW\xe4J LY\x14\x98\x13ft"
+#app.secret_key = "l\xcd\xaf\x93\xd5sy\xb4WHu\xdd\x8fW\xe4J LY\x14\x98\x13ft"

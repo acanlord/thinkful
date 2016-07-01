@@ -51,18 +51,16 @@ def adduser():
                 password=generate_password_hash(password))
     session.add(user)
     session.commit()
-"""
-@app.route("/login", methods=["POST"])
-def login_post():
-    email = request.form["email"]
-    password = request.form["password"]
-    user = session.query(User).filter_by(email=email).first()
-    if not user or not check_password_hash(user.password, password):
-        flash("Incorrect username or password", "danger")
-        return redirect(url_for("login_get"))
 
-    login_user(user)
-    return redirect(request.args.get('next') or url_for("entries"))
-"""
+from flask_migrate import Migrate, MigrateCommand
+from blog.database import Base
+
+class DB(object):
+    def __init__(self, metadata):
+        self.metadata = metadata
+
+migrate = Migrate(app, DB(Base.metadata))
+manager.add_command('db', MigrateCommand)
+
 if __name__ == "__main__":
     manager.run()
