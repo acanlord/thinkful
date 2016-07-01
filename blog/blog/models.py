@@ -3,9 +3,9 @@ import datetime
 from sqlalchemy import Column, Integer, String, \
     Sequence, Text, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
-from database import Base, engine
+from .database import Base, engine
 
-from flask.ext.login import UserMixin
+from flask_login import UserMixin
 
 
 class Post(Base):
@@ -32,10 +32,9 @@ class User(Base, UserMixin):
     name = Column(String(128))
     email = Column(String(128), unique=True)
     password = Column(String(128))
-    posts = relationship("Post", backref="author")
+    entries = relationship("Entry", backref="author")
 
 
-Base.metadata.create_all(engine)
 
 class Entry(Base):
     __tablename__ = "entries"
@@ -44,4 +43,6 @@ class Entry(Base):
     title = Column(String(1024))
     content = Column(Text)
     datetime = Column(DateTime, default=datetime.datetime.now)
-    author_id = Column(Integer, ForeignKey('users.id'))
+    author = Column(Integer, ForeignKey('users.id'))
+
+Base.metadata.create_all(engine)

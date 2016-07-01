@@ -7,7 +7,7 @@ from flask_login import current_user
 
 PAGINATE_BY = 10
 
-@app.route("/")
+@app.route("/",  methods=["GET","POST"])
 @app.route("/page/<int:page>")
 def entries(page=1):
     # Zero-indexed page
@@ -40,7 +40,7 @@ def add_entry_get():
 
 from flask import request, redirect, url_for
 
-@app.route("/entry/add", methods=["POST"])
+@app.route("/entry/add", methods=["GET","POST"])
 def add_entry_post():
     entry = Entry(
         title=request.form["title"],
@@ -115,7 +115,5 @@ def login_post():
         return redirect(url_for("login_get"))
 
     login_user(user)
-    return redirect(url_for("posts"))
+    return redirect(request.args.get('next') or url_for("entries"))
 
-# set the secret key.  keep this really secret:
-#app.secret_key = "l\xcd\xaf\x93\xd5sy\xb4WHu\xdd\x8fW\xe4J LY\x14\x98\x13ft"

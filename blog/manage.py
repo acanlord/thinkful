@@ -1,7 +1,7 @@
 import os
 from flask_script import Manager
 from blog import app
-#from blog.database import session
+from blog.database import session
 #from blog.models import Post
 
 manager = Manager(app)
@@ -33,7 +33,6 @@ from blog.database import User
 from flask import flash
 from flask_login import login_user
 from werkzeug.security import check_password_hash
-#from .database import User
 
 @manager.command
 def adduser():
@@ -51,16 +50,6 @@ def adduser():
                 password=generate_password_hash(password))
     session.add(user)
     session.commit()
-
-from flask_migrate import Migrate, MigrateCommand
-from blog.database import Base
-
-class DB(object):
-    def __init__(self, metadata):
-        self.metadata = metadata
-
-migrate = Migrate(app, DB(Base.metadata))
-manager.add_command('db', MigrateCommand)
 
 if __name__ == "__main__":
     manager.run()
