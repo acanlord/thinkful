@@ -2,9 +2,10 @@ from flask import render_template
 
 from . import app
 from .database import session, Entry
+from flask import Markup
+import mistune
 
-PAGINATE_BY = 10
-
+PAGINATE_BY=10
 @app.route("/")
 @app.route("/page/<int:page>")
 def entries(page=1):
@@ -47,7 +48,8 @@ def add_entry_post():
     )
     session.add(entry)
     session.commit()
-    return redirect(url_for("entries"))
+    #return redirect(url_for("entries"))
+    return redirect("/",code=302)
 
 @app.route("/entry/<id>" , methods=["GET"])
 def show_entry(id):

@@ -12,6 +12,7 @@
             {{ entry.title }}
         </h1>
         {{ entry.content | markdown }}
+	{{ entry.author.name }}
     </div>
 </div>
 {% endmacro %}

@@ -123,4 +123,4 @@ def login_post():
 @app.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('login.html'))
+    return redirect(url_for('login_get'))

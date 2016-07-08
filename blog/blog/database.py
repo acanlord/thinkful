@@ -15,6 +15,8 @@ session = Session()
 
 
 from sqlalchemy import Column, Integer, String, Text, DateTime
+from sqlalchemy import ForeignKey
+from sqlalchemy.orm import relationship
 
 class Entry(Base):
     __tablename__ = "entries"
@@ -23,6 +25,7 @@ class Entry(Base):
     title = Column(String(1024))
     content = Column(Text)
     datetime = Column(DateTime, default=datetime.datetime.now)
+    author_id = Column(Integer, ForeignKey('users.id'))
 
 Base.metadata.create_all(engine)
 
@@ -35,3 +38,4 @@ class User(Base, UserMixin):
     name = Column(String(128))
     email = Column(String(128), unique=True)
     password = Column(String(128))
+    entries = relationship("Entry", backref="author")
