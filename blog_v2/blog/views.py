@@ -38,7 +38,8 @@ def add_entry_get():
 
 from flask import request, redirect, url_for
 
-@app.route("/entry/add", methods=["POST"])
+#@app.route("/entry/add", methods=["POST"])
+@app.route("/entry/add", methods=["GET","POST"])
 def add_entry_post():
     entry = Entry(
         title=request.form["title"],
@@ -47,3 +48,49 @@ def add_entry_post():
     session.add(entry)
     session.commit()
     return redirect(url_for("entries"))
+
+@app.route("/entry/<id>" , methods=["GET"])
+def show_entry(id):
+    entries=session.query(Entry)
+    entry=entries.get(id)
+    return render_template('entries.html', entries=[entry])
+
+@app.route("/entry/<id>")
+def post(id=id):
+    post = session.query(Entry).filter(Entry.id == postid).first()
+    return render_template(
+        "single_post.html",
+        post=post,
+        id=id,
+    )
+
+@app.route("/entry/<entryid>/edit", methods=["GET"])
+def edit_post_get(entryid=Entry.id):
+    entry = session.query(Entry).filter_by(id=entryid).first()
+    return render_template("edit_post.html",entry=entry)
+
+
+@app.route("/entry/<entryid>/edit", methods=["POST"])
+def edit_post(entryid):
+
+    title = request.form["title"]
+    content = mistune.markdown(request.form["content"])
+
+    session.query(Entry).filter_by(id=entryid).update(
+        {"title": title, "content": content}
+    )
+
+    session.commit()
+    return redirect(url_for("entries"))
+
+
+@app.route("/entry/<entryid>/delete", methods=["GET"])
+def delete_post(entryid):
+    session.query(Entry).filter_by(id=entryid).delete()
+    session.commit()
+    return redirect(url_for("entries"))
+
+
+@app.route("/login", methods=["GET"])
+def login_get():
+    return render_template("login.html")

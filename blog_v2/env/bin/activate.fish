@@ -32,7 +32,7 @@ end
 # unset irrelavent variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/ubuntu/workspace/thinkful/blog/env"
+set -gx VIRTUAL_ENV "/home/ubuntu/workspace/thinkful/blog_v2/env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
